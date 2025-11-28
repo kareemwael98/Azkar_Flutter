@@ -32,3 +32,21 @@ google-services.json
 # Android Profiling
 *.hprof
 
+# Flutter specific
+flutter_project/.dart_tool/
+flutter_project/.flutter-plugins
+flutter_project/.flutter-plugins-dependencies
+flutter_project/.packages
+flutter_project/.pub-cache/
+flutter_project/.pub/
+flutter_project/build/
+flutter_project/.metadata
+flutter_project/pubspec.lock
+flutter_project/*.iml
+flutter_project/.idea/
+flutter_project/android/
+flutter_project/ios/
+flutter_project/linux/
+flutter_project/macos/
+flutter_project/windows/
+flutter_project/web/
