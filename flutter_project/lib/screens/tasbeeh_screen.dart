@@ -10,6 +10,9 @@ class TasbeehScreen extends StatefulWidget {
 }
 
 class _TasbeehScreenState extends State<TasbeehScreen> {
+  /// Empty digit placeholder character for DSEG font (displays as blank space)
+  static const String _emptyDigit = '!';
+
   int _counter = 0;
   late AudioPlayer _audioPlayer;
 
@@ -46,14 +49,14 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
   }
 
   /// Format the counter display using DSEG font convention
-  /// "!" equals to empty digit space in DSEG font
+  /// Empty digits are represented using the _emptyDigit placeholder
   String _formatCounter() {
     if (_counter < 10) {
-      return '!!!$_counter';
+      return '$_emptyDigit$_emptyDigit$_emptyDigit$_counter';
     } else if (_counter < 100) {
-      return '!!$_counter';
+      return '$_emptyDigit$_emptyDigit$_counter';
     } else if (_counter < 1000) {
-      return '!$_counter';
+      return '$_emptyDigit$_counter';
     } else {
       return '$_counter';
     }

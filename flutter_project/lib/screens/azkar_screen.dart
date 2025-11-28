@@ -43,7 +43,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
       setState(() {
         _azkar.removeAt(index);
       });
-      _showSnackBar(' ${AppStrings.finished} ');
+      _showSnackBar(AppStrings.finished);
 
       // Close screen if all azkar are completed
       if (_azkar.isEmpty) {

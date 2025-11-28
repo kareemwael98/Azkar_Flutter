@@ -7,6 +7,9 @@ import 'tasbeeh_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  /// Aspect ratio for menu button grid items
+  static const double _buttonAspectRatio = 1.2;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                         shrinkWrap: true,
                         mainAxisSpacing: 16,
                         crossAxisSpacing: 16,
-                        childAspectRatio: 1.2,
+                        childAspectRatio: _buttonAspectRatio,
                         physics: const NeverScrollableScrollPhysics(),
                         children: [
                           _buildMenuButton(

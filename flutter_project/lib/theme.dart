@@ -39,6 +39,7 @@ class AppTheme {
             fontSize: 16,
             fontWeight: FontWeight.w500,
           ),
+          // Large top padding to make room for icon overlay (matching Android layout)
           padding: const EdgeInsets.only(top: 60, bottom: 8, left: 16, right: 16),
           minimumSize: const Size(150, 0),
           shape: RoundedRectangleBorder(
