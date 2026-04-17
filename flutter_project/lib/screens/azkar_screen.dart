@@ -66,7 +66,11 @@ class _AzkarScreenState extends State<AzkarScreen> {
         duration: const Duration(milliseconds: 1500),
         behavior: SnackBarBehavior.floating,
         margin: EdgeInsets.only(
-          // Position just below the status bar, mirroring Gravity.TOP in native
+          // Place the snackbar just below the status bar, mirroring Gravity.TOP
+          // in the native app.  The offset (status-bar height + snackbar height
+          // + a small gap ≈ 60 dp) is subtracted from the screen height so that
+          // `SnackBarBehavior.floating`'s bottom-relative margin positions the
+          // widget near the top of the visible area.
           bottom: MediaQuery.of(context).size.height -
               MediaQuery.of(context).padding.top -
               60,
