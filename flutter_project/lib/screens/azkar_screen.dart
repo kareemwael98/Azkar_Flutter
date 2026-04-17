@@ -63,15 +63,15 @@ class _AzkarScreenState extends State<AzkarScreen> {
           textAlign: TextAlign.center,
           style: const TextStyle(fontSize: 16),
         ),
-        duration: const Duration(milliseconds: 1000),
+        duration: const Duration(milliseconds: 1500),
         behavior: SnackBarBehavior.floating,
         margin: EdgeInsets.only(
-          bottom: MediaQuery.of(context).size.height - 150,
-          left: 100,
-          right: 100,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          // Position just below the status bar, mirroring Gravity.TOP in native
+          bottom: MediaQuery.of(context).size.height -
+              MediaQuery.of(context).padding.top -
+              60,
+          left: 16,
+          right: 16,
         ),
       ),
     );
