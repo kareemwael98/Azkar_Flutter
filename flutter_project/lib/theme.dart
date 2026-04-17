@@ -11,6 +11,7 @@ class AppColors {
   static const Color teal700 = Color(0xFF018786);
   static const Color backgroundGray = Color(0xFFEFEFEF);
   static const Color statusBarColor = Color(0xCC4F7C79);
+  static const Color snackbarBackground = Color(0xFF323232);
 }
 
 /// App theme
@@ -49,7 +50,11 @@ class AppTheme {
       ),
       snackBarTheme: const SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
-        backgroundColor: AppColors.greenDark,
+        backgroundColor: AppColors.snackbarBackground,
+        contentTextStyle: const TextStyle(color: AppColors.white),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(4)),
+        ),
       ),
     );
   }
